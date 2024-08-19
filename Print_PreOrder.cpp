@@ -15,6 +15,14 @@ public:
     }
 };
 
+void PreOrder(Node *root)
+{
+    if(!root) return;
+    cout<<root->data<<" ";
+    PreOrder(root->left);
+    PreOrder(root->right);
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
