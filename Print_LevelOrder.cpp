@@ -15,12 +15,12 @@ public:
     }
 };
 
-void InOrder(Node *root) // order is--> left-->root-->right
+void PostOrder(Node *root) // order is--> Level Wise
 {
     if(!root) return;
-    InOrder(root->left);
+    PostOrder(root->left);
     cout<<root->data<<" ";
-    InOrder(root->right);
+    PostOrder(root->right);
 }
 
 int main() {
@@ -38,6 +38,6 @@ int main() {
     b->left = d;
     b->right = e;
     c->left = f;
-    InOrder(root);
+    PostOrder(root);
     return 0;
 }
