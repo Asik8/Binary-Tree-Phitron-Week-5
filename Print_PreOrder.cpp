@@ -15,7 +15,7 @@ public:
     }
 };
 
-void PreOrder(Node *root)
+void PreOrder(Node *root) // order is--> root-->left-->right
 {
     if(!root) return;
     cout<<root->data<<" ";
