@@ -44,6 +44,7 @@ Node * Input_Tree()
 
 void Print_LevelOrder(Node *root) 
 {
+    if(!root) return;
     queue<Node*>q;
     q.push(root);
     while(!q.empty())
