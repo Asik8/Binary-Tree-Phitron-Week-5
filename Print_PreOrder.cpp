@@ -38,5 +38,6 @@ int main() {
     b->left = d;
     b->right = e;
     c->left = f;
+    PreOrder(root);
     return 0;
 }
