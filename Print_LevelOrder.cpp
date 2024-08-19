@@ -15,12 +15,18 @@ public:
     }
 };
 
-void PostOrder(Node *root) // order is--> Level Wise
+void Print_LevelOrder(Node *root) // order is--> Level Wise left--> right
 {
-    if(!root) return;
-    PostOrder(root->left);
-    cout<<root->data<<" ";
-    PostOrder(root->right);
+    queue<Node*>q;
+    q.push(root);
+    while(!q.empty())
+    {
+        Node* f = q.front();
+        q.pop();
+        cout<<f->data<<" ";
+        if(f->left)q.push(f->left);
+        if(f->right)q.push(f->right);
+    }
 }
 
 int main() {
@@ -38,6 +44,6 @@ int main() {
     b->left = d;
     b->right = e;
     c->left = f;
-    PostOrder(root);
+    Print_LevelOrder(root);
     return 0;
 }
