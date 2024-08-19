@@ -30,14 +30,14 @@ Node * Input_Tree()
         q.pop(); 
         int l,r;
         cin>>l>>r;
-        Node *left = NULL;
-        Node *right = NULL;
-        if(l != -1) left = new Node(l);
-        if(r != -1) right = new Node(r);
-        f->left = left;
-        f->right = right;
-        if(f->left) q.push(left);
-        if(f->right) q.push(right);
+        Node *newLeft = NULL;
+        Node *newRight = NULL;
+        if(l != -1) newLeft = new Node(l);
+        if(r != -1) newRight = new Node(r);
+        f->left = newLeft;
+        f->right = newRight;
+        if(f->left) q.push(newLeft);
+        if(f->right) q.push(newRight);
     }
     return root;
 }
