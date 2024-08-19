@@ -17,6 +17,7 @@ public:
 
 void Print_LevelOrder(Node *root) // order is--> Level Wise left--> right
 {
+    if(!root) return;
     queue<Node*>q;
     q.push(root);
     while(!q.empty())
